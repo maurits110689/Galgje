@@ -1,7 +1,18 @@
 print("Welkom bij galgje! Je moet het geheime woord raden voordat je pogingen op zijn!")
-print("Typ een letter en we beginnen!")
-print("Het woord heeft", len(woord) "letters...")
+
+print(" ")
+
+import random
 
 woordenlijst = ["informatica", "informatiekunde", "spelletje", "aardigheidje", "scholier", "fotografie", "waardebepaling", "specialiteit", "verzekering", "universiteit", "heesterperk"]
 
- woordenlijst = random.choice(woordenlijst)
+woord = random.choice(woordenlijst)
+lengtewoord = len(woord)
+
+print("Het woord heeft "+ str(lengtewoord) + " letters...")
+
+print(" ")
+
+print("Je hebt 5 beurten, typ een letter en we beginnen!")
+
+beurten = 5
