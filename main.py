@@ -21,3 +21,13 @@ beurten = 5
 print(" ")
 
 print(streepjes)
+
+print(" ")
+
+userinput = input("Typ hier je letter: ")
+if userinput in woord:
+  print(" ")
+  print("Gefeliciteerd deze letter zit in het woord!")
+if userinput not in woord:
+  print(" ") 
+  print("Jammer deze letter zit niet in het woord :(")
