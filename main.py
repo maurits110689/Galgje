@@ -22,6 +22,9 @@ print(" ")
 userinput = input("Typ hier je letter: ")
 gekozenletters = userinput
 
+lijst = []
+lijst.append(userinput)
+
 for letter in woord:
   if letter in gekozenletters:
     print(letter)
