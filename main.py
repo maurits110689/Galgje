@@ -8,7 +8,6 @@ woordenlijst = ["informatica", "informatiekunde", "spelletje", "aardigheidje", "
 
 woord = random.choice(woordenlijst)
 lengtewoord = len(woord)
-streepjes = '_ ' * len(woord)
 
 print("Het woord heeft "+ str(lengtewoord) + " letters...")
 
@@ -20,11 +19,15 @@ beurten = 5
 
 print(" ")
 
-print(streepjes)
-
-print(" ")
-
 userinput = input("Typ hier je letter: ")
+gekozenletters = userinput
+
+for letter in woord:
+  if letter in gekozenletters:
+    print(letter)
+  else:
+    print("_")
+
 if userinput in woord:
   print(" ")
   print("Gefeliciteerd deze letter zit in het woord!")
