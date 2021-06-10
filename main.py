@@ -20,6 +20,10 @@ print(" ")
 
 userinput = input("Typ hier je letter: ")
 gekozenletters = userinput
+x = userinput.isalpha()
+if x is False:
+ print(" ")
+ print("Oeps, je hebt iets anders dan een letter ingevuld probeer het opnieuw!")
 
 if userinput in woord:
   print(" ")
@@ -32,10 +36,11 @@ if userinput in woord:
   print("")
   print("Gefeliciteerd deze letter zit in het woord!")
 if userinput not in woord:
-  print(" ")
-  print("Jammer deze letter zit niet in het woord :(") 
-  counter = counter + 1
-  if counter == 1:
+  if x is True:
+    print(" ")
+    print("Jammer deze letter zit niet in het woord :(")
+    counter = counter + 1
+    if counter == 1:
       print(" ")
       print("Je hebt nog 9 beurten!")
       print("""
@@ -45,7 +50,7 @@ if userinput not in woord:
       |
       |
  _____|""")
-  elif counter == 2:
+    elif counter == 2:
            print(" ")
            print("Je hebt nog 8 beurten!")
            print("""  ____
@@ -55,7 +60,7 @@ if userinput not in woord:
       |
       |
  _____|""")
-  elif counter == 3:
+    elif counter == 3:
             print(" ")
             print("Je hebt nog 7 beurten!")
             print("""  ____
@@ -65,7 +70,7 @@ if userinput not in woord:
       |
       |
  _____|""")
-  elif counter == 4:
+    elif counter == 4:
       print(" ")
       print("Je hebt nog 6 beurten!")
       print("""  ____
@@ -75,7 +80,7 @@ if userinput not in woord:
       |
       |
  _____|""")
-  elif counter == 5:
+    elif counter == 5:
       print(" ")
       print("Je hebt nog 5 beurten!")
       print("""  ____
@@ -85,7 +90,7 @@ if userinput not in woord:
       |
       | 
  _____|""")
-  elif counter == 6:
+    elif counter == 6:
       print(" ")
       print("Je hebt nog 4 beurten!")
       print("""  ____
@@ -95,7 +100,7 @@ if userinput not in woord:
       |
       |
  _____|""")
-  elif counter == 7:
+    elif counter == 7:
       print(" ")
       print("Je hebt nog 3 beurten!")
       print("""  ____
@@ -105,7 +110,7 @@ if userinput not in woord:
       |
       |
  _____|""")
-  elif counter == 8:
+    elif counter == 8:
       print(" ")
       print("Je hebt nog 2 beurten!")
       print("""  ____
@@ -115,7 +120,7 @@ if userinput not in woord:
       |
       |
  _____|""")
-  elif counter == 9:
+    elif counter == 9:
       print(" ")
       print("Je hebt nog 1 beurt!")
       print("""  ____
@@ -125,7 +130,7 @@ if userinput not in woord:
   /   |
       |
  _____|""")
-  elif counter ==10:
+    elif counter ==10:
       print("Helaas, je bent dood")
       print("""  ____
    | \|
