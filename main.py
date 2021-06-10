@@ -14,32 +14,31 @@ print("Het woord heeft "+ str(lengtewoord) + " letters...")
 
 print(" ")
 
-print("Je hebt 6 beurten, typ een letter en we beginnen!")
+print("Je hebt 10 beurten, typ een letter en we beginnen!")
 
 print(" ")
 
 userinput = input("Typ hier je letter: ")
 gekozenletters = userinput
 
-print(" ")
-
-for letter in woord:
-  if letter in gekozenletters:
-    print(letter,end=' ')
-  else:
-    print("_ ",end='')
-
 if userinput in woord:
   print(" ")
-  print(" ")
+  for letter in woord:
+   if letter in userinput:
+     print(letter,end=' ')
+   else:
+     print("_",end=' ')
+  print("")
+  print("")
   print("Gefeliciteerd deze letter zit in het woord!")
 if userinput not in woord:
-  print(" ")
   print(" ")
   print("Jammer deze letter zit niet in het woord :(") 
   counter = counter + 1
   if counter == 1:
-      print("""  
+      print(" ")
+      print("Je hebt nog 9 beurten!")
+      print("""
       |
       |
       |
@@ -47,6 +46,8 @@ if userinput not in woord:
       |
  _____|""")
   elif counter == 2:
+           print(" ")
+           print("Je hebt nog 8 beurten!")
            print("""  ____
       |
       |
@@ -55,6 +56,8 @@ if userinput not in woord:
       |
  _____|""")
   elif counter == 3:
+            print(" ")
+            print("Je hebt nog 7 beurten!")
             print("""  ____
      \|
       |
@@ -63,6 +66,8 @@ if userinput not in woord:
       |
  _____|""")
   elif counter == 4:
+      print(" ")
+      print("Je hebt nog 6 beurten!")
       print("""  ____
    | \|
       |
@@ -71,6 +76,8 @@ if userinput not in woord:
       |
  _____|""")
   elif counter == 5:
+      print(" ")
+      print("Je hebt nog 5 beurten!")
       print("""  ____
    | \|
    0  |
@@ -79,6 +86,8 @@ if userinput not in woord:
       | 
  _____|""")
   elif counter == 6:
+      print(" ")
+      print("Je hebt nog 4 beurten!")
       print("""  ____
    | \|
    0  |
@@ -87,6 +96,8 @@ if userinput not in woord:
       |
  _____|""")
   elif counter == 7:
+      print(" ")
+      print("Je hebt nog 3 beurten!")
       print("""  ____
    | \|
    0  |
@@ -95,6 +106,8 @@ if userinput not in woord:
       |
  _____|""")
   elif counter == 8:
+      print(" ")
+      print("Je hebt nog 2 beurten!")
       print("""  ____
    | \|
    0  |
@@ -103,6 +116,8 @@ if userinput not in woord:
       |
  _____|""")
   elif counter == 9:
+      print(" ")
+      print("Je hebt nog 1 beurt!")
       print("""  ____
    | \|
    0  |
@@ -120,10 +135,10 @@ if userinput not in woord:
       |
  _____|""")
 
-print(" ")
-print("Het woord was "+ str(woord) +"!")
+if counter == 10:
+ print(" ")
+ print("Het woord was "+ str(woord) +"!")
       
-
 lijst = []
 lijst.append(userinput)
 
