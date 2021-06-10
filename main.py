@@ -19,11 +19,18 @@ print("Je hebt 10 beurten, typ een letter en we beginnen!")
 print(" ")
 
 userinput = input("Typ hier je letter: ")
+userinput = userinput.lower()
 gekozenletters = userinput
 x = userinput.isalpha()
 if x is False:
  print(" ")
  print("Oeps, je hebt iets anders dan een letter ingevuld probeer het opnieuw!")
+ print(" ")
+ counter = counter + 1
+ if counter == 1:
+  print("Je hebt nog "+ str(counter)+ " beurt!")
+ else:
+  print("Je hebt nog "+ str(counter)+ " beurten!")
 
 if userinput in woord:
   print(" ")
@@ -39,7 +46,7 @@ if userinput not in woord:
   if x is True:
     print(" ")
     print("Jammer deze letter zit niet in het woord :(")
-    counter = counter + 1
+    counter = counter - 1
     if counter == 1:
       print(" ")
       print("Je hebt nog 9 beurten!")
