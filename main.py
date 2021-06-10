@@ -1,4 +1,4 @@
-print("Welkom bij galgje! Je moet het geheime woord raden voordat je pogingen op zijn!")
+print("Welkom bij Galgje! Je moet het geheime woord raden voordat je pogingen op zijn!")
 
 print(" ")
 
@@ -15,7 +15,7 @@ print(" ")
 
 print("Je hebt 5 beurten, typ een letter en we beginnen!")
 
-Pogingen = 6
+x = "6"
 
 print(" ")
 
@@ -40,13 +40,14 @@ if userinput in woord:
   print("Gefeliciteerd deze letter zit in het woord!")
 if userinput not in woord:
   print(" ") 
-  print("Jammer deze letter zit niet in het woord :(")
-  pogingen = -1
-  print(pogingen)
+  print("Jammer deze letter zit niet in het woord :(") 
+  pogingen = x
+  print(" ")
+  print("Je hebt nog " + str(pogingen) + " pogingen!")
 
 
 def drawgalgjes():
-   if Pogingen == 5:
+   if pogingen == 5:
         print("Jammer, je hebt nog 4 pogingen over")
         print("""     ____
       | \|
@@ -55,7 +56,7 @@ def drawgalgjes():
          |
          |
     _____|""")
-   if Pogingen == 4:
+   if pogingen == 4:
         print("Jammer, je hebt nog 3 pogingen over")
         print("""     ____
       | \|
@@ -64,7 +65,7 @@ def drawgalgjes():
          |
          |
     _____|""")
-   if Pogingen == 3:
+   if pogingen == 3:
         print("Jammer, je hebt nog 2 pogingen over")
         print("""     ____
       | \|
@@ -74,7 +75,7 @@ def drawgalgjes():
          |
     _____|""")
 
-   if Pogingen == 2:
+   if pogingen == 2:
         print("je hebt nog 1 pogingen over")
         print("""     ____
       | \|
@@ -84,7 +85,7 @@ def drawgalgjes():
          |
     _____|""")
 
-   if Pogingen == 1:
+   if pogingen == 1:
         print("""     ____
       | \|
       o  |
